@@ -6,7 +6,8 @@
     margin: 0px 0px 0px 30px;
 }
 
-.movieRow--listarea { /* Tudo o que passar da tela vai ser cortado */
+.movieRow--listarea {
+    /* Tudo o que passar da tela vai ser cortado */
     overflow-x: hidden;
     padding-left: 30px;
 }
@@ -16,19 +17,23 @@
 }
 
 .movieRow--item {
-    display: inline-block; /* Um item/filme ao lado do outro */
+    display: inline-block;
+    /* Um item/filme ao lado do outro */
     width: 150px;
     cursor: pointer;
 }
 
 .movieRow--item img {
     width: 100%;
-    transform: scale(0.9); /* espaço de 100%, mas o CSS vai deixar em 90% para dar espaço a animação, não usar padding nem margin */
+    transform: scale(0.9);
+    /* espaço de 100%, mas o CSS vai deixar em 90% para dar espaço a animação, não usar padding nem margin */
     transition: all ease 0.2s;
+    user-select: none;
 }
 
 .movieRow--item img:hover {
-    transform:scale(1) /* a imagem vai ocupar 100% doe espaço definido, sem acrescentar pading nem margin */
+    transform: scale(1)
+        /* a imagem vai ocupar 100% doe espaço definido, sem acrescentar pading nem margin */
 }
 
 .movieRow--left,
@@ -37,19 +42,21 @@
     width: 40px;
     height: 225px;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.6) ;
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
-    opacity: 0;  /* Iniciar escondido */
+    opacity: 0;
+    /* Iniciar escondido */
     transition: all ease 0.5s;
 }
 
 .movieRow:hover .movieRow--left,
 .movieRow:hover .movieRow--right {
-    opacity: 1;  /* Hover: aparecer */
+    opacity: 1;
+    /* Hover: aparecer */
 }
 
 .movieRow--left {
@@ -61,6 +68,7 @@
 }
 
 @media (max-width:760px) {
+
     .movieRow--right,
     .movieRow--left {
         opacity: 1;
